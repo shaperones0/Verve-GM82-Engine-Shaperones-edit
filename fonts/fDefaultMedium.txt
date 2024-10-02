@@ -1,4 +1,4 @@
-name=Arial
+name=Nekoron
 size=18
 bold=1
 italic=0

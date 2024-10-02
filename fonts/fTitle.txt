@@ -1,6 +1,6 @@
-name=pix S 10pt bold
-size=18
-bold=0
+name=Nekoron
+size=24
+bold=1
 italic=0
 charset=1
 aa_level=3
