@@ -8,7 +8,7 @@ event_inherited()
 
 init = false
 block = noone
-sound = "block_change"
+sound = snd_block_change
 #define Destroy_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -31,7 +31,7 @@ if !init {
 
 if !visible if collision_rectangle(bbox_left - 1, bbox_top - 1, bbox_right + 1, bbox_bottom + 1, Player, false, false) {
     visible = true
-    sound_play("block_change")
+    sound_play(snd_block_change)
 }
 
 if instance_exists(block) {
@@ -52,4 +52,4 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-//field sound: string
+//field sound: constant

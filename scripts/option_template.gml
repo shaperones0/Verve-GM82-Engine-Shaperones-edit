@@ -18,7 +18,7 @@ switch(argument0) {
         // Runs every frame the option is selected.
         if input_check_pressed(key_menu_accept) || input_check_pressed(key_menu_left) || input_check_pressed(key_menu_right) {
             // Change the option
-            sound_play("player_ground_jump")
+            sound_play(snd_player_ground_jump)
         }
         break
 

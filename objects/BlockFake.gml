@@ -6,7 +6,7 @@ applies_to=self
 */
 event_inherited()
 
-sound = "block_change"
+sound = snd_block_change
 #define Collision_Player
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -21,4 +21,4 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-//field sound: string
+//field sound: constant

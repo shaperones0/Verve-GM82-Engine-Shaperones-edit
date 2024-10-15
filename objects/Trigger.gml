@@ -24,7 +24,8 @@ if !is_undefined(key) if !ds_map_find_value(global.trigger_map, key) {
 }
 
 if sound != "" {
-    sound_play_ex(sound, volume)
+    var snd; snd = sound_play(sound)
+    audio_volume(snd, volume)
 }
 
 ds_map_set(global.trigger_map, trigger, true)

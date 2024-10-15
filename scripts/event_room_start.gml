@@ -3,9 +3,8 @@
 // Called from the World object.
 
 room_speed = global.game_speed
-sound_kind_stop(0)
-sound_kind_stop(3)
-music_play_room_bgm()
+// TODO: add stop all sounds here
+music_play(music_get_room_bgm())
 
 ds_map_clear(global.trigger_map)
 
