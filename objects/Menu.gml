@@ -34,12 +34,12 @@ _h_input = input_check_pressed(key_menu_right) - input_check_pressed(key_menu_le
 if state == state_not_selected {
     if _h_input != 0 {
         current_file = modwrap(current_file + _h_input, 0, file_count)
-        sound_play("player_ground_jump")
+        sound_play(snd_player_ground_jump)
     }
     save_select(current_file)
 
     if input_check_pressed(key_menu_accept) {
-        sound_play("player_air_jump")
+        sound_play(snd_player_air_jump)
         state = state_difficulty
         if save_get("exists") {
             current_difficulty = -1
@@ -57,7 +57,7 @@ if state == state_not_selected {
 else if state == state_difficulty {
     current_difficulty = modwrap(current_difficulty + _h_input, ternary(save_get("exists"), -1, 0), global.difficulty_count)
     if _h_input != 0 {
-        sound_play("player_ground_jump")
+        sound_play(snd_player_ground_jump)
     }
 
     if input_check_pressed(key_menu_accept) {
@@ -68,7 +68,7 @@ else if state == state_difficulty {
             if save_get("exists") {
                 current_overwrite = 1
                 state = state_overwrite
-                sound_play("player_ground_jump")
+                sound_play(snd_player_ground_jump)
             }
             else {
                 save_new_game(current_difficulty)
@@ -84,7 +84,7 @@ else if state == state_difficulty {
 else if state == state_overwrite {
     current_overwrite = modwrap(current_overwrite + _h_input, 0, 2)
     if _h_input != 0 {
-        sound_play("player_ground_jump")
+        sound_play(snd_player_ground_jump)
     }
 
     if input_check_pressed(key_menu_accept) {

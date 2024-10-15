@@ -12,12 +12,12 @@ exe_description=
 exe_version=1.0.0.0
 
 has_backgrounds=1
-has_datafiles=0
+has_datafiles=1
 has_fonts=1
 has_objects=1
 has_paths=0
 has_scripts=1
-has_sounds=0
+has_sounds=1
 has_sprites=1
 has_timelines=0
 has_triggers=1

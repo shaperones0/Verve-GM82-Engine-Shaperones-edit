@@ -80,15 +80,14 @@
 	|player_flip
 	|player_set_mask
 	|player_check_crush
-+Music
-	|sound_init
-	|sound_balance
++Audio
+	|audio_init
+	|audio_balance
 	|music_get_room_bgm
-	|music_play_room_bgm
 	|music_play
-	|music_stop
-	|sound_set_sound_volume
-	|sound_set_music_volume
+	|audio_set_sound_volume
+	|audio_set_music_volume
+	|sound_play
 +Trigger
 	|trigger_init
 	|trigger_make

@@ -1,23 +1,19 @@
-///music_play(music_name: str, loop: bool)
-var _music_name, _loop;
+///music_play(music: cidx)
+//plays specified music, 0 to stop music. music instance is then stored in global.current_music_instance
+var _music;
 
-_music_name = argument0
-_loop = argument1
+_music = argument0
 
-if global.current_music_name != _music_name {
+if global.current_music_cidx != _music {
     // change music
-    if _music_name == "" {
+    if _music == 0 {
         // stop music
-        music_stop()
+        audio_music_stop()
+        global.current_music_instance = noone
     }
     else {
         // change the music to specified
-        if _loop {
-            global.current_music_instance = sound_loop(_music_name)
-        }
-        else {
-            global.current_music_instance = sound_play(_music_name)
-        }
+        global.current_music_instance = audio_music_play_ext(global.audio_list[_music], 0, global.audio_vol_list[_music], 0, 1.0, true)
     }
-    global.current_music_name = _music_name
+    global.current_music_cidx = _music
 }

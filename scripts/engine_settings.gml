@@ -19,7 +19,7 @@ global.debug_key = vk_control
     // The framerate the game runs at.
     global.game_speed = 50
     // Modifies the volume of everything. Recommended to keep below 0.7.
-    global.sound_gain = 0.7
+    global.audio_gain = 0.7
     // Makes time increment when the player is dead.
     global.time_when_dead = false
     // Makes time increment when the save is considered cleared.

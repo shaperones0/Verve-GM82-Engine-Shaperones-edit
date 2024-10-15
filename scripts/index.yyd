@@ -38,7 +38,7 @@ option_music_volume
 option_list
 option_fullscreen
 
-sound_init
+audio_init
 
 render_compose
 render_init
@@ -50,8 +50,8 @@ input_get_name
 input_set_key
 input_reset_keys
 option_sound_volume
-sound_set_sound_volume
-sound_set_music_volume
+audio_set_sound_volume
+audio_set_music_volume
 set_room_views
 player_try_jump
 player_ground_jump
@@ -67,9 +67,9 @@ player_flip
 player_set_mask
 option_template
 music_play
-music_stop
+
 music_get_room_bgm
-music_play_room_bgm
+
 debug_hotkeys
 draw_pause_screen
 restart_game
@@ -100,10 +100,11 @@ trg_string
 player_check_crush
 save_save_asap
 trg_trigger
-sound_balance
+audio_balance
 cement_blocks
 
 gm82room_jtool_table
 camera_set_target
 camera_reset_target
 camera_set_enabled
+sound_play
