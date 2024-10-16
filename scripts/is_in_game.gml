@@ -3,10 +3,7 @@
 // Returns true if a room isn't a menu room.
 var _room;
 
-_room = room
-if argument_count > 0 {
-    _room = argument[0]
-}
+if argument_count > 0 _room = argument[0] else _room = room
 
 switch(_room) {
     case rInit:
