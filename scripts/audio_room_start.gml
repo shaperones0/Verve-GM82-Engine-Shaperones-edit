@@ -9,6 +9,7 @@ switch(room) {
         break
 
     default:
+        sound_stop_all()
         music_play(0)
         break
 }

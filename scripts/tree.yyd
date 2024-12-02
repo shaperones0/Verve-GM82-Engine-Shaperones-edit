@@ -80,6 +80,7 @@
 	|audio_room_start
 	|music_play
 	|sound_play
+	|sound_stop_all
 +Utility
 	+Compatibility
 		|savedata_save

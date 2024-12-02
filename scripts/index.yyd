@@ -112,3 +112,4 @@ sound_play
 
 trigger_execute_selected
 
+sound_stop_all
