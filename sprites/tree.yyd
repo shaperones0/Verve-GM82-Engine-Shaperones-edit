@@ -4,20 +4,6 @@
 	|sprMusic
 	|sprCamera
 	|sprKiller
-	+Trigger makers
-		|sprTriggerMaker
-		|sprTriggerMakerRed
-		|sprTriggerMakerOrange
-		|sprTriggerMakerYellow
-		|sprTriggerMakerChartreuse
-		|sprTriggerMakerGreen
-		|sprTriggerMakerEmerald
-		|sprTriggerMakerCyan
-		|sprTriggerMakerAzure
-		|sprTriggerMakerBlue
-		|sprTriggerMakerViolet
-		|sprTriggerMakerMagenta
-		|sprTriggerMakerPink
 +Player
 	|sprPlayerIdle
 	|sprPlayerRun
@@ -101,6 +87,10 @@
 	|sprTrigger
 	|sprButtonLeft
 	|sprButtonRight
+	|sprTriggerRelay
+	|sprSelector
+	|sprTrgUnlock
+	|sprTrgExec
 +Items
 	|sprItem
 	|sprBossItem
