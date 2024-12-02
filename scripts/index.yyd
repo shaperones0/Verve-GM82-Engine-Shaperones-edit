@@ -81,25 +81,25 @@ camera_snap
 savedata_save
 savedata_load
 
-trigger_init
-camera_default
-trg_move
-trigger_make
 
-trg_move_to
-trg_move_dir
+camera_default
+
+
+
+
+
 ease_value
 
-trg_gravity
-trg_path
-trg_sound
-trg_fade
-trg_stretch
-trg_rotate
-trg_string
+
+
+
+
+
+
+
 player_check_crush
 save_save_asap
-trg_trigger
+
 audio_balance
 cement_blocks
 

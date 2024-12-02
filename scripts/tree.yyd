@@ -88,20 +88,6 @@
 	|audio_set_sound_volume
 	|audio_set_music_volume
 	|sound_play
-+Trigger
-	|trigger_init
-	|trigger_make
-	|trg_move
-	|trg_move_dir
-	|trg_move_to
-	|trg_path
-	|trg_gravity
-	|trg_sound
-	|trg_fade
-	|trg_stretch
-	|trg_rotate
-	|trg_string
-	|trg_trigger
 +Utility
 	+Compatibility
 		|savedata_save

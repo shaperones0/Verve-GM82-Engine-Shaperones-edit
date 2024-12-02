@@ -26,7 +26,7 @@ config_init()
 input_init()
 audio_init()
 camera_init()
-trigger_init()
+//trigger init
 render_init()
 
 global.grav = 1

@@ -56,9 +56,9 @@ SlopeTopRight
 SlopeBottomRight
 SlopeTopLeft
 SlopeBottomLeft
-Trigger
+
 Camera
-TriggerManager
+
 BlockMoving
 TileDisplay
 BlockFake
@@ -67,24 +67,24 @@ BlockInvisible
 
 
 
-ButtonLeft
-ButtonRight
+
+
 
 SolidTileDisplay
 VolumeCheck
 PlatformTouch
 KillerBlock
-TriggerMaker
-TriggerMove
-TriggerMoveDir
-TriggerMoveTo
-TriggerPath
-TriggerGravity
-TriggerSound
-TriggerFade
-TriggerStretch
-TriggerRotate
-TriggerString
-TriggerTrigger
+
+
+
+
+
+
+
+
+
+
+
+
 
 

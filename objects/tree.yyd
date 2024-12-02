@@ -65,22 +65,6 @@
 	|GravityDown
 	|Sign
 +Triggers
-	|Trigger
-	|TriggerManager
-	|ButtonLeft
-	|ButtonRight
-	|TriggerMaker
-	|TriggerMove
-	|TriggerMoveDir
-	|TriggerMoveTo
-	|TriggerPath
-	|TriggerGravity
-	|TriggerSound
-	|TriggerFade
-	|TriggerStretch
-	|TriggerRotate
-	|TriggerString
-	|TriggerTrigger
 +Warps
 	|RoomChanger
 	|Warp

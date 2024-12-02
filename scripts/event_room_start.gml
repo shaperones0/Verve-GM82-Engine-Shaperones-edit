@@ -6,7 +6,7 @@ room_speed = global.game_speed
 // TODO: add stop all sounds here
 music_play(music_get_room_bgm())
 
-ds_map_clear(global.trigger_map)
+//ds_map_clear(global.trigger_map)
 
 // Set this every room start, then set it to true ahead of every transition
 // that needs to clear input. (see engine_settings)
