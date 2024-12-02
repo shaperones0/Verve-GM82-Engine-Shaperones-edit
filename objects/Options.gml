@@ -81,7 +81,7 @@ if state == state_options {
         _option = ds_list_find_value(options_list, current_option)
         script_execute(_option, "init")
 
-        sound_play(snd_player_ground_jump)
+        sound_play(sndPlayerGroundJump)
     }
 
     script_execute(_option, "step")
@@ -99,7 +99,7 @@ else if state == state_keyboard_controls {
     if !is_rebinding {
         if _v_input != 0 {
             current_key = modwrap(current_key + _v_input, 0, ds_list_size(global.input_rebindable_list) + 1)
-            sound_play(snd_player_ground_jump)
+            sound_play(sndPlayerGroundJump)
         }
 
         if input_check_pressed(key_menu_accept) {

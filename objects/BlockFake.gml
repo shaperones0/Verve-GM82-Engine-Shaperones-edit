@@ -6,7 +6,7 @@ applies_to=self
 */
 event_inherited()
 
-sound = snd_block_change
+sound = sndBlockChange
 #define Collision_Player
 /*"/*'/**//* YYD ACTION
 lib_id=1

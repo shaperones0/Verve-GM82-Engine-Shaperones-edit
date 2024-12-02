@@ -16,7 +16,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-sound_play(snd_player_shoot)
+sound_play(sndPlayerShoot)
 alarm[0] = shoot_delay
 #define Step_0
 /*"/*'/**//* YYD ACTION
@@ -46,8 +46,8 @@ else {
 if _increment != 0 {
     config_set("sound_volume", clamp(config_get("sound_volume") + _increment, 0, 100))
     config_set("music_volume", clamp(round_unbiased(ratio * config_get("sound_volume")), 0, 100))
-    audio_set_music_volume(config_get("music_volume") / 100)
-    audio_set_sound_volume(config_get("sound_volume") / 100)
+    audio_music_volume(config_get("music_volume") / 100)
+    audio_sound_volume(config_get("music_volume") / 100)
 }
 
 if input_check_pressed(key_menu_accept) {

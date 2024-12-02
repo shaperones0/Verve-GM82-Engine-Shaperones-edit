@@ -20,7 +20,7 @@ switch(argument0) {
         if _h_input != 0 {
             if volume_option_timer mod volume_option_period == 0 || volume_option_timer > volume_option_delay {
                 config_set("sound_volume", clamp(config_get("sound_volume") + _h_input, 0, 100))
-                audio_set_sound_volume(config_get("sound_volume") / 100)
+                audio_sound_volume(config_get("sound_volume") / 100)
             }
             volume_option_timer += 1
         }
@@ -30,7 +30,7 @@ switch(argument0) {
 
         sound_test_timer += 1
         if sound_test_timer mod sound_test_delay == 0 {
-            sound_play(snd_player_shoot)
+            sound_play(sndPlayerShoot)
         }
 
         break

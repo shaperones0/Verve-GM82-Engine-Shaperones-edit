@@ -1,0 +1,8 @@
+extension=.ogg
+exists=1
+source=mus_guyrock.ogg
+kind=3
+effects=0
+volume=1
+pan=0
+preload=1

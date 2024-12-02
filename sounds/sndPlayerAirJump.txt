@@ -1,6 +1,6 @@
 extension=.wav
 exists=1
-source=silence.wav
+source=snd_player_air_jump.wav
 kind=0
 effects=0
 volume=1

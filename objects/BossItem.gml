@@ -27,7 +27,7 @@ else {
     save_set(str_cat("boss_item", index), true)
 }
 instance_destroy()
-sound_play(snd_get_item)
+sound_play(sndItem)
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1

@@ -21,5 +21,5 @@ config_default("smoothing", false)
 
 // Apply the saved options.
 window_set_fullscreen(config_get("fullscreen"))
-audio_set_music_volume(config_get("music_volume") / 100)
-audio_set_sound_volume(config_get("sound_volume") / 100)
+audio_music_volume(config_get("music_volume") / 100)
+audio_sound_volume(config_get("sound_volume") / 100)

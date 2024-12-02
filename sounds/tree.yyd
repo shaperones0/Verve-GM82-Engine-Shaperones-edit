@@ -1,1 +1,11 @@
-|_placeholder
++music
+	|musGuyRock
++sounds
+	|sndBlockChange
+	|sndItem
+	|sndPlayerAirJump
+	|sndPlayerDeath
+	|sndPlayerGroundJump
+	|sndPlayerShoot
+	|sndPlayerWallJump
+|sndNull

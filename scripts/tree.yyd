@@ -63,11 +63,6 @@
 			|option_fullscreen
 			|option_smoothing
 			|option_keyboard
-+Events
-	|event_game_start
-	|event_room_start
-	|event_world_step
-	|event_world_end_step
 +Player
 	|player_try_jump
 	|player_ground_jump
@@ -82,11 +77,8 @@
 	|player_check_crush
 +Audio
 	|audio_init
-	|audio_balance
-	|music_get_room_bgm
+	|audio_room_start
 	|music_play
-	|audio_set_sound_volume
-	|audio_set_music_volume
 	|sound_play
 +Utility
 	+Compatibility

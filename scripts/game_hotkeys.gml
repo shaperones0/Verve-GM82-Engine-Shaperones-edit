@@ -95,5 +95,5 @@ if keyboard_check(vk_control) && keyboard_check_pressed(ord("M")) {
             config_set("music_volume", 15)
         }
     }
-    audio_set_music_volume(config_get("music_volume") / 100)
+    audio_music_volume(config_get("music_volume") / 100)
 }
