@@ -65,6 +65,12 @@
 	|GravityDown
 	|Sign
 +Triggers
+	|Trigger
+	|TriggerRelay
+	|SelectorMultiple
+	|SelectorArea
+	|TrgExec
+	|TrgUnlock
 +Warps
 	|RoomChanger
 	|Warp

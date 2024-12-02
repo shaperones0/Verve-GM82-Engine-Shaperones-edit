@@ -98,3 +98,5 @@
 	|ternary
 	|get_formatted_time
 	|ease_value
++Trigger
+	|trigger_execute_selected

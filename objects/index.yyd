@@ -88,3 +88,10 @@ KillerBlock
 
 
 
+Trigger
+SelectorMultiple
+TriggerRelay
+TrgExec
+TrgUnlock
+
+SelectorArea
