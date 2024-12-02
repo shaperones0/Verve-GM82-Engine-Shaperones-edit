@@ -4,7 +4,7 @@ if !global.trigger_making {
     switch argument[0] {
         case "init":
             var snd; snd = audio_play(sound_sound)
-            audio_volume(snd, sound_sound_volume)
+            audio_set_volume(snd, sound_sound_volume)
             break
     }
 }
