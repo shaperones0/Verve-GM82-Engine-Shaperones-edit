@@ -99,3 +99,5 @@ TrgSpawn
 TrgValueChange
 BadgeValueChange
 TriggerRoomStart
+TrgPath
+BadgePath

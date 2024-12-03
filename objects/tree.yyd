@@ -74,7 +74,9 @@
 	|TrgUnlock
 	|TrgSpawn
 	|TrgValueChange
+	|TrgPath
 	|BadgeValueChange
+	|BadgePath
 +Warps
 	|RoomChanger
 	|Warp

@@ -105,9 +105,7 @@ action_id=603
 applies_to=self
 */
 if track_badges {
-    var i, len; len=ds_list_size(badges_list)
-    for (i=0;i<len;i+=1) {
-        instance_destroy_id(ds_list_find_value(badges_list,i))
-    }
+    var i,len; len=ds_list_size(badges_list)
+    for (i=0;i<len;i+=1) instance_destroy_id(ds_list_find_value(badges_list,i))
     ds_list_clear(badges_list)
 }

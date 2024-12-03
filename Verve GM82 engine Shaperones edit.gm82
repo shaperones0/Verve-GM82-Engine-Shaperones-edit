@@ -1,14 +1,14 @@
 gm82_version=5
 gameid=614531398
 
-info_author=
+info_author=shaperones
 info_version=100
 info_information=
 
-exe_company=
-exe_product=
-exe_copyright=
-exe_description=
+exe_company=Shaperones Games Ltd
+exe_product=Verve GM82 Engine Shaperones edit
+exe_copyright=shaperones
+exe_description=This is an engine for IW Fangames based on Verve GM82
 exe_version=1.0.0.0
 
 has_backgrounds=1

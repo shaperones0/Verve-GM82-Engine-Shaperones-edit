@@ -94,6 +94,7 @@
 	|sprTrgExec
 	|sprTrgSpawn
 	|sprTrgValueChange
+	|sprTrgPath
 	|sprBadgeFade
 	|sprBadgeMovePoint
 	|sprBadgePath

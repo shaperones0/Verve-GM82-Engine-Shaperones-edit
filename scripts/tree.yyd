@@ -91,6 +91,7 @@
 	|ternary
 	|get_formatted_time
 	|ease_value
+	|path_pos_value
 +Trigger
 	|trigger_list_selected
 	|badge_create

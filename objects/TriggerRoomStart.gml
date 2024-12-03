@@ -8,6 +8,16 @@ applies_to=self
 inst=noone
 once=true
 active=true
+alarm[0]=1
+#define Alarm_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+
+if active with inst event_trigger(ev_trigger_on)
+if once instance_destroy()
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -24,9 +34,6 @@ applies_to=self
 //field inst: instance
 //field once: true - If false, then output every frame
 //field active: true
-
-if active with inst event_trigger(ev_trigger_on)
-if once instance_destroy()
 #define Trigger_Trigger On
 /*"/*'/**//* YYD ACTION
 lib_id=1
