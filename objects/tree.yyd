@@ -66,6 +66,7 @@
 	|Sign
 +Triggers
 	|Trigger
+	|TriggerRoomStart
 	|TriggerRelay
 	|SelectorMultiple
 	|SelectorArea
