@@ -92,4 +92,8 @@
 	|get_formatted_time
 	|ease_value
 +Trigger
-	|trigger_execute_selected
+	|trigger_list_selected
+	|badge_create
++Debug
+	|debug_map_write
+	|debug_list_write

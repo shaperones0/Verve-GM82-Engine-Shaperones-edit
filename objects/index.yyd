@@ -95,3 +95,6 @@ TrgExec
 TrgUnlock
 
 SelectorArea
+TrgSpawn
+TrgValueChange
+BadgeValueChange

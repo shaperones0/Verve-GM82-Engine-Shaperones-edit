@@ -116,3 +116,9 @@ sprTriggerRelay
 sprTrgUnlock
 sprTrgExec
 sprSelector
+sprTrgSpawn
+sprBadgeFade
+sprBadgeMovePoint
+sprBadgeValueChange
+sprBadgePath
+sprTrgValueChange

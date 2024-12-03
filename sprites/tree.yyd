@@ -91,6 +91,12 @@
 	|sprSelector
 	|sprTrgUnlock
 	|sprTrgExec
+	|sprTrgSpawn
+	|sprTrgValueChange
+	|sprBadgeFade
+	|sprBadgeMovePoint
+	|sprBadgePath
+	|sprBadgeValueChange
 +Items
 	|sprItem
 	|sprBossItem

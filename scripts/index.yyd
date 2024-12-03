@@ -110,6 +110,10 @@ camera_set_enabled
 sound_play
 
 
-trigger_execute_selected
+
 
 sound_stop_all
+badge_create
+trigger_list_selected
+debug_map_write
+debug_list_write

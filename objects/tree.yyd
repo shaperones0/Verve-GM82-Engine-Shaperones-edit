@@ -71,6 +71,9 @@
 	|SelectorArea
 	|TrgExec
 	|TrgUnlock
+	|TrgSpawn
+	|TrgValueChange
+	|BadgeValueChange
 +Warps
 	|RoomChanger
 	|Warp
