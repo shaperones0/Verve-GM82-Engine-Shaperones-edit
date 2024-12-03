@@ -33,17 +33,17 @@ case SelectorArea:
 
     switch (_inst.filter_type) {
     case "none":
-        with all if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id trigger_list_selected(id,_list)
+        with all if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id and tag_match(_inst.tag) trigger_list_selected(id,_list)
         break
     case "include":
-        with _inst.filter_obj1 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id trigger_list_selected(id,_list)
-        with _inst.filter_obj2 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id trigger_list_selected(id,_list)
-        with _inst.filter_obj3 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id trigger_list_selected(id,_list)
-        with _inst.filter_obj4 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id trigger_list_selected(id,_list)
-        with _inst.filter_obj5 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id trigger_list_selected(id,_list)
+        with _inst.filter_obj1 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id and tag_match(_inst.tag) trigger_list_selected(id,_list)
+        with _inst.filter_obj2 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id and tag_match(_inst.tag) trigger_list_selected(id,_list)
+        with _inst.filter_obj3 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id and tag_match(_inst.tag) trigger_list_selected(id,_list)
+        with _inst.filter_obj4 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id and tag_match(_inst.tag) trigger_list_selected(id,_list)
+        with _inst.filter_obj5 if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id and tag_match(_inst.tag) trigger_list_selected(id,_list)
         break
     case "exclude":
-        with all if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id
+        with all if collision_rectangle(rect_l, rect_t, rect_r, rect_b, id, true, false) and id != other.id and tag_match(_inst.tag)
             and object_index != _inst.filter_obj1
             and object_index != _inst.filter_obj2
             and object_index != _inst.filter_obj3

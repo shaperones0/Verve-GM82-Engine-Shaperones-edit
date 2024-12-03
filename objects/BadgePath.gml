@@ -40,10 +40,8 @@ if strong {
 else {
     //add needed motion
     var new_path_pos, old_path_pos;
-    //show_message(str_cat(offset+spd*(time-1), " ", offset+spd*time))
     old_path_pos=ease_value(path_pos_value(offset+spd*(time-1), endaction), ease)
     new_path_pos=ease_value(path_pos_value(offset+spd*time, endaction), ease)
-    //show_message(str_cat(old_path_pos, " ", new_path_pos))
     inst.x+=path_get_x(pth,new_path_pos)-path_get_x(pth,old_path_pos)
     inst.y+=path_get_y(pth,new_path_pos)-path_get_y(pth,old_path_pos)
 }

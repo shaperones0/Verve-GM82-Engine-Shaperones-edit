@@ -6,6 +6,7 @@ applies_to=self
 */
 ///Allows relaying action on multiple instances inside area, covered by this object or inside rectangle specified
 filter_type="none"//"include","exclude"
+tag=""
 filter_obj1=noone
 filter_obj2=noone
 filter_obj3=noone
@@ -22,7 +23,8 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-//field filter_type: enum("include","exclude") - none by default
+//field tag: string - Set to only affect instances with specified __tag variable set
+//field filter_type: enum("include","exclude") - none
     //field     filter_obj1: object
     //field     filter_obj2: object
     //field     filter_obj3: object

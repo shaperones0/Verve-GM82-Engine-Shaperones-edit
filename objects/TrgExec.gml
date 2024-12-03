@@ -10,7 +10,6 @@ code=""
 repeat_=false
 triggered=false
 selected_list=noone
-selected_list_len=0
 #define Destroy_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -47,8 +46,6 @@ applies_to=self
 //field repeat_: false - Set to true if code to be executed every frame.
 
 selected_list=ds_map_create()
-trigger_list_selected(inst,selected_list)
-selected_list_len=ds_map_size(my_selected_list)
 #define Trigger_Trigger On
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -58,11 +55,15 @@ applies_to=self
 ///Apply code
 if inst==noone execute_string(code)
 else {
-    var cur_inst, last_inst; cur_inst=ds_map_find_first(selected_list) last_inst=ds_map_find_last(selected_list)
-    while 1 {
-        execute_string("with "+string(cur_inst)+"{"+code+"}")
-        if cur_inst==last_inst break
-        else cur_inst=ds_map_find_next(selected_list,cur_inst)
+    ds_map_clear(selected_list)
+    trigger_list_selected(inst,selected_list)
+    if ds_map_size(selected_list) > 0 {
+        var cur_inst, last_inst; cur_inst=ds_map_find_first(selected_list) last_inst=ds_map_find_last(selected_list)
+        while 1 {
+            execute_string("with "+string(cur_inst)+"{"+code+"}")
+            if cur_inst==last_inst break
+            else cur_inst=ds_map_find_next(selected_list,cur_inst)
+        }
     }
 }
 triggered=true

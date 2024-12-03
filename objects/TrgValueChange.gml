@@ -23,7 +23,6 @@ ease=ease_none
 track_badges=false
 badges_list=noone
 selected_list=noone
-selected_list_len=0
 #define Destroy_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -52,8 +51,6 @@ applies_to=self
     
 if track_badges badges_list=ds_list_create()
 selected_list=ds_map_create()
-trigger_list_selected(inst,selected_list)
-selected_list_len=ds_map_size(selected_list)
 #define Other_5
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -68,35 +65,39 @@ action_id=603
 applies_to=self
 */
 ///Do the thing
+ds_map_clear(selected_list)
+trigger_list_selected(inst,selected_list)
+if ds_map_size(selected_list) > 0 {
 
-var cur_inst, last_inst; cur_inst=ds_map_find_first(selected_list) last_inst=ds_map_find_last(selected_list)
-while 1 {
-    if string(value_start) == "" and string(value_stepsize) == "" {
-        //only value end is set - change immediately
-        execute_string("with " + string(cur_inst) + " { " + var_name + " = " + string(value_end) + " }")
-    }
-    else {
-        //create badge
-        var _o; _o = badge_create(cur_inst, BadgeValueChange)
-        _o.var_name = var_name
-        if relative {
-            execute_string("_o.value_start=argument0." + var_name, cur_inst)
-            _o.value_end=_o.value_start+value_end
+    var cur_inst, last_inst; cur_inst=ds_map_find_first(selected_list) last_inst=ds_map_find_last(selected_list)
+    while 1 {
+        if string(value_start) == "" and string(value_stepsize) == "" {
+            //only value end is set - change immediately
+            execute_string("with " + string(cur_inst) + " { " + var_name + " = " + string(value_end) + " }")
         }
         else {
-            if string(value_start) != "" execute_string("with " + string(cur_inst) + " { " + var_name + " = " + string(value_start) + " }")
-            execute_string("_o.value_start=argument0." + var_name, cur_inst)
-            _o.value_end=value_end
+            //create badge
+            var _o; _o = badge_create(cur_inst, BadgeValueChange)
+            _o.var_name = var_name
+            if relative {
+                execute_string("_o.value_start=argument0." + var_name, cur_inst)
+                _o.value_end=_o.value_start+value_end
+            }
+            else {
+                if string(value_start) != "" execute_string("with " + string(cur_inst) + " { " + var_name + " = " + string(value_start) + " }")
+                execute_string("_o.value_start=argument0." + var_name, cur_inst)
+                _o.value_end=value_end
+            }
+            _o.value_stepsize=value_stepsize
+            _o.stop_when_reached=stop_when_reached
+            _o.strong=strong
+            _o.ease=ease
+            _o.max_time=max_time
+            if track_badges ds_list_add(badges_list, _o)
         }
-        _o.value_stepsize=value_stepsize
-        _o.stop_when_reached=stop_when_reached
-        _o.strong=strong
-        _o.ease=ease
-        _o.max_time=max_time
-        if track_badges ds_list_add(badges_list, _o)
+        if cur_inst==last_inst break
+        else cur_inst=ds_map_find_next(selected_list,cur_inst)
     }
-    if cur_inst==last_inst break
-    else cur_inst=ds_map_find_next(selected_list,cur_inst)
 }
 #define Trigger_Trigger Off
 /*"/*'/**//* YYD ACTION
