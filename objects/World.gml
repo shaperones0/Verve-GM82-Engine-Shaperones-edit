@@ -23,6 +23,19 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+///music sync
+
+global.music_time+=1
+if global.music_sync {
+    if (abs(audio_music_get_pos()*50 - global.music_time)>5) {
+        audio_music_set_pos(global.music_time/50)
+    }
+}
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
 ///game hotkeys
 
 // Pause game
@@ -427,7 +440,11 @@ applies_to=self
 */
 ///audio init
 //Initializes audio stuff and balancing
-global.current_music_cidx = 0
+global.music_cidx = 0
+global.music_sync = false
+global.music_time = 0
+global.music_lenframe = 0
+global.ambience_cidx = 0
 
 audio_global_volume(global.audio_gain)
 audio_music_loop(true)
@@ -562,7 +579,7 @@ switch(room) {
     case rTitle:
     case rMenu:
     case rOptions:
-        custom_music_play(musGuyRock)
+        custom_music_play(musGuyRock, 1, 1)
         break
 
     default:

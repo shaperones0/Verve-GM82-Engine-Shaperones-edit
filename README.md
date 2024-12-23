@@ -13,7 +13,7 @@ You will need following files:
   * copy it over into the source folder (so the `datafiles` folder is right next to `backgrounds`, `cache` and `fonts` folder)
 
 ## TODO
-- [ ] fix music play, add support for syncing sounds
+- [x] fix music play, add support for syncing sounds
 - [ ] rewrite muted behavior
 - [ ] investigate input folder stuff
 - [ ] fix volume on changing settings

@@ -32,5 +32,3 @@ ease_elastic_inout=12
 ease_bounce_in=13
 ease_bounce_out=14
 ease_bounce_inout=15
-mf_normal=1
-mf_crossfade=2
