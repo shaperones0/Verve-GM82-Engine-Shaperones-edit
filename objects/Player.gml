@@ -143,7 +143,7 @@ if vine_direction != 0 {
         if input_check(key_jump) {
             hspeed = 15
             vspeed = -9 * global.grav
-            sound_play(sndPlayerWallJump)
+            custom_sound_play(sndPlayerWallJump)
         }
         else {
             hspeed = 3

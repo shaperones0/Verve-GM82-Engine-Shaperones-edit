@@ -14,6 +14,8 @@ You will need following files:
 
 ## TODO
 - [ ] fix music play, add support for syncing sounds
+- [ ] rewrite muted behavior
+- [ ] investigate input folder stuff
 - [ ] fix volume on changing settings
 - [ ] fix bool fields to true/false
 - [ ] add trigger descriptions 

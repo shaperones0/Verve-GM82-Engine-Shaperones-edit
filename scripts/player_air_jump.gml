@@ -10,4 +10,4 @@ else {
     air_jumps = max(air_jumps, 0)
 }
 
-sound_play(sndPlayerAirJump)
+custom_sound_play(sndPlayerAirJump)

@@ -7,7 +7,7 @@ if global.debug_god_mode {
 with(Player) {
     save_set_persistent("deaths", save_get("deaths") + 1)
     instance_create(x, y, BloodEmitter)
-    sound_play(sndPlayerDeath)
+    custom_sound_play(sndPlayerDeath)
 
     instance_create(0, 0, GameOver)
     instance_destroy()

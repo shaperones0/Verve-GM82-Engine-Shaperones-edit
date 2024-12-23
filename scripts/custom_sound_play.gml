@@ -1,4 +1,4 @@
-///sound_play(sound, loop=false, pitch=1.0, pan=0) -> inst
+///custom_sound_play(sound, loop=false, pitch=1.0, pan=0) -> inst
 //plays specified sound
 
 var _sound, _loop, _pitch, _pan;

@@ -5,7 +5,7 @@ action_id=603
 applies_to=self
 */
 if input_check_pressed(key_menu_accept) {
-    sound_play(sndPlayerAirJump)
+    custom_sound_play(sndPlayerAirJump)
     room_goto(rMenu)
 }
 #define Draw_0

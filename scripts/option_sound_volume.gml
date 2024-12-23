@@ -30,7 +30,7 @@ switch(argument0) {
 
         sound_test_timer += 1
         if sound_test_timer mod sound_test_delay == 0 {
-            sound_play(sndPlayerShoot)
+            custom_sound_play(sndPlayerShoot)
         }
 
         break

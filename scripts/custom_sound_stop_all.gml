@@ -1,4 +1,4 @@
-///sound_stop_all()
+///custom_sound_stop_all()
 //stop all sounds (assume there is no way you have more than 50 sounds)
 var i; for (i=0; i<50; i+=1) {
     if (sound_exists(i) and i != global.current_music_cidx) {

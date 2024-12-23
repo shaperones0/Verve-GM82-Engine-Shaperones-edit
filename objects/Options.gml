@@ -81,7 +81,7 @@ if state == state_options {
         _option = ds_list_find_value(options_list, current_option)
         script_execute(_option, "init")
 
-        sound_play(sndPlayerGroundJump)
+        custom_sound_play(sndPlayerGroundJump)
     }
 
     script_execute(_option, "step")
@@ -99,7 +99,7 @@ else if state == state_keyboard_controls {
     if !is_rebinding {
         if _v_input != 0 {
             current_key = modwrap(current_key + _v_input, 0, ds_list_size(global.input_rebindable_list) + 1)
-            sound_play(sndPlayerGroundJump)
+            custom_sound_play(sndPlayerGroundJump)
         }
 
         if input_check_pressed(key_menu_accept) {
@@ -162,6 +162,7 @@ applies_to=self
 */
 var i, yy, _option, _input, _row_name, _row_value;
 
+draw_set_color(c_black)
 draw_set_font(fDefaultLarge)
 draw_set_valign(fa_middle)
 
@@ -217,4 +218,19 @@ else if state == state_keyboard_controls {
     draw_sprite(sprPlayerIdle, animation_timer / 5, keyboard_x_margin - 16, keyboard_y_start + keyboard_y_step * current_key + 2)
 }
 
-menu_draw_navigation(false)
+//draw navigation
+var _accept_button, _back_button, _options_button;
+
+_accept_button = key_get_name(input_get_key(key_menu_accept))
+_back_button = key_get_name(input_get_key(key_menu_back))
+_options_button = key_get_name(input_get_key(key_menu_options))
+
+draw_set_valign(fa_bottom)
+draw_set_font(fDefaultSmall)
+
+draw_set_halign(fa_left)
+draw_text_outlined(42, global.game_height - 40, str_cat("[", _back_button, "] Back"), c_white, c_black)
+draw_set_halign(fa_right)
+draw_text_outlined(global.game_width - 42, global.game_height - 40, str_cat("[", _accept_button, "] Accept"), c_white, c_black)
+
+draw_reset()

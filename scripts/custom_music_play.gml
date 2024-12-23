@@ -1,4 +1,4 @@
-///music_play(music, loop=true, fade_type=mf_normal, fade_time=0)
+///custom_music_play(music, loop=true, fade_type=mf_normal, fade_time=0)
 //plays specified music, 0 to stop music.
 var _music, _loop, _fade_type, _fade_time;
 

@@ -6,5 +6,5 @@ if instance_number(Bullet) < 4 {
     if x_scale < 0 {
         _bullet.direction = 180
     }
-    sound_play(sndPlayerShoot)
+    custom_sound_play(sndPlayerShoot)
 }
