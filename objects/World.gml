@@ -57,15 +57,14 @@ var _object;
 engine_settings()
 
 if global.debug {
-    global.dir_cwd=directory_previous(working_directory)
+    //change here to save in local folder
+    //global.dir_cwd=directory_previous(working_directory)
+    global.dir_cwd=directory_previous(directory_previous(directory_previous(temp_directory)))+"Roaming\"+filename_valid(global.game_title)
 }
 else {
-    global.dir_cwd=working_directory
+    //global.dir_cwd=working_directory
 }
 
-global.dir_data     =global.dir_cwd+"\data"             // doesn't end with backslash
-global.dir_sounds   =global.dir_data+"\sounds"          // doesn't end with backslash
-global.dir_music    =global.dir_data+"\music"           // doesn't end with backslash
 global.dir_save     =global.dir_cwd+"\"+global.save_folder // DOES end with backslash
 
 directory_create(global.dir_save)
