@@ -71,3 +71,6 @@ debug_list_write
 path_pos_value
 tag_match
 filename_valid
+custom_sound_volume
+
+audio_setup

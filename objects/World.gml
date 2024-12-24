@@ -23,12 +23,23 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-///music sync
+///sound stuff
 
 global.music_time+=1
 if global.music_sync {
     if (abs(audio_music_get_pos()*50 - global.music_time)>5) {
         audio_music_set_pos(global.music_time/50)
+    }
+}
+
+var i; for (i=0; i<global.audio_maxcount; i+=1) {
+    if sound_exists(i) {
+        global.audio_vol_list[i] = 0.9
+        global.audio_inst_list[i] = ds_map_create()
+        global.audio_group_list[i] = ag_any
+        global.audio_modifier_vol[i] = 1
+        global.audio_modifier_spd[i] = 0
+        global.audio_modifier_time[i] = 0
     }
 }
 /*"/*'/**//* YYD ACTION
@@ -121,18 +132,13 @@ if keyboard_check_pressed(vk_f5) {
 
 // Mute music
 if keyboard_check(vk_control) && keyboard_check_pressed(ord("M")) {
-    if config_get("music_volume") > 0 {
-        unmuted_music_volume = config_get("music_volume")
-        config_set("music_volume", 0)
+    if config_get("muted") {
+        config_set("muted", 1)
     }
     else {
-        if unmuted_music_volume > 0 {
-            config_set("music_volume", unmuted_music_volume)
-        }
-        else {
-            config_set("music_volume", 15)
-        }
+        config_get("muted", 0)
     }
+
     audio_music_volume(config_get("music_volume") / 100)
 }
 /*"/*'/**//* YYD ACTION
@@ -381,6 +387,7 @@ config_default("music_volume", 15)
 config_default("sound_volume", 25)
 config_default("fullscreen", false)
 config_default("smoothing", false)
+config_default("muted", false)
 
 // Apply the saved options.
 window_set_fullscreen(config_get("fullscreen"))
@@ -445,19 +452,44 @@ global.music_sync = false
 global.music_time = 0
 global.music_lenframe = 0
 global.ambience_cidx = 0
+global.audio_maxcount=100   //increase if something breaks :)
 
 audio_global_volume(global.audio_gain)
 audio_music_loop(true)
 
-global.audio_vol_list[musGuyRock] = 0.8
+var i; for (i=0; i<global.audio_maxcount; i+=1) {
+    if sound_exists(i) {
+        global.audio_vol_list[i] = 0.9
+        global.audio_inst_list[i] = ds_map_create()
+        global.audio_group_list[i] = ag_any
+        global.audio_modifier_vol[i] = 1
+        global.audio_modifier_spd[i] = 0
+        global.audio_modifier_time[i] = 0
+    }
+}
 
-global.audio_vol_list[sndBlockChange] = 0.8
-global.audio_vol_list[sndItem] = 1
-global.audio_vol_list[sndPlayerAirJump] = 0.7
-global.audio_vol_list[sndPlayerDeath] = 0.7
-global.audio_vol_list[sndPlayerGroundJump] = 0.7
-global.audio_vol_list[sndPlayerShoot] = 0.5
-global.audio_vol_list[sndPlayerWallJump] = 0.5
+//audio balance
+audio_setup(musGuyRock, 0.8, ag_music)
+
+audio_setup(sndBlockChange,         0.8, ag_any)
+audio_setup(sndItem,                1, ag_any)
+audio_setup(sndPlayerAirJump,       0.7, ag_any)
+audio_setup(sndPlayerDeath,         0.7, ag_any)
+audio_setup(sndPlayerGroundJump,    0.7, ag_any)
+audio_setup(sndPlayerShoot,         0.5, ag_any)
+audio_setup(sndPlayerWallJump,      0.5, ag_any)
+
+//volumes:
+//global audio gain (global.audio_gain)
+//audio group volume (those are controlled by game options)
+//audio balance volume
+
+//create audio instance lists (if you are gettings errors here, increase the limit for i)
+var i; for (i=0; i<global.audio_maxcount; i+=1) {
+    if sound_exists(i) {
+        global.audio_inst_list[i] = ds_list_create()
+    }
+}
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -702,10 +734,10 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-/// Draw debug overlay
+///draw debug overlay
 var _text, _player_x, _player_y, _player_align;
 
-if is_in_game && global.debug_overlay > 0 {
+if is_in_game() && global.debug_overlay > 0 {
     _text = ""
 
     _player_x = "-"

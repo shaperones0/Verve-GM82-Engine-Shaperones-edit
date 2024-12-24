@@ -30,7 +30,8 @@ switch(argument0) {
         break
 
     case "name":
-        return "Music Volume"
+        if config_get("muted") return "Music Volume (muted)"
+        else return "Music Volume"
 
     case "value":
         return str_cat(config_get("music_volume"), "%")

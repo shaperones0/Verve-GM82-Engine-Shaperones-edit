@@ -64,6 +64,8 @@
 	|custom_music_play
 	|custom_sound_play
 	|custom_sound_stop_all
+	|custom_sound_volume
+	|audio_setup
 +Utility
 	+Compatibility
 		|savedata_save

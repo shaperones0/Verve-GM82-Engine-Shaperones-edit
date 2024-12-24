@@ -32,3 +32,6 @@ ease_elastic_inout=12
 ease_bounce_in=13
 ease_bounce_out=14
 ease_bounce_inout=15
+ag_any=0
+ag_music=1
+ag_count=2

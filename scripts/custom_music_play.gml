@@ -19,11 +19,11 @@ if global.music_cidx != _music {
             //starting from silence
             if _fade_time >= 0 {
                 //start with fade time, ignore type
-                audio_music_play_ext(_music, _fade_time, global.audio_vol_list[_music], 0, 1.0, _loop)
+                audio_music_play_ext(_music, _fade_time, custom_sound_volume(_music), 0, 1.0, _loop)
             }
             else {
                 //instantly start
-                audio_music_play_ext(_music, 0, global.audio_vol_list[_music], 0, 1.0, _loop)
+                audio_music_play_ext(_music, 0, custom_sound_volume(_music), 0, 1.0, _loop)
             }
         }
         else {
@@ -31,15 +31,15 @@ if global.music_cidx != _music {
             if _fade_time >= 0 {
                 //do what fade type tells
                 if _crossfade {
-                    audio_music_crossfade_ext(_music, _fade_time, global.audio_vol_list[_music], 0, 1.0, _loop)
+                    audio_music_crossfade_ext(_music, _fade_time, custom_sound_volume(_music), 0, 1.0, _loop)
                 }
                 else {
-                    audio_music_switch_ext(_music, _fade_time, _fade_time, global.audio_vol_list[_music], 0, 1.0, _loop)
+                    audio_music_switch_ext(_music, _fade_time, _fade_time, custom_sound_volume(_music), 0, 1.0, _loop)
                 }
             }
             else {
                 //instantly switch
-                audio_music_switch_ext(_music, 0, 0, global.audio_vol_list[_music], 0, 1.0, _loop)
+                audio_music_switch_ext(_music, 0, 0, custom_sound_volume(_music), 0, 1.0, _loop)
             }
         }
     }
